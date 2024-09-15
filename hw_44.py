@@ -18,11 +18,4 @@ print(data)
 
 print(pd.get_dummies(data, columns=['whoAmI']))
 
-# Не используем get_dummies
-
-data.loc[data['whoAmI'] == 'human', 'human'] = '1'
-data.loc[data['whoAmI'] != 'human', 'human'] = '0'
-data.loc[data['whoAmI'] == 'robot', 'robot'] = '1'
-data.loc[data['whoAmI'] != 'robot', 'robot'] = '0'
-
 print(data)
